@@ -25,7 +25,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- Title & Header ---
-st.title("🚀 GitHub Developer Classification System")
+st.imgae()
+st.title("GitHub Developer Classification System")
 st.markdown("""
 This platform implements a complete **Machine Learning Lifecycle** to classify GitHub users into **Machine Learning** or **Web Development** categories using the *MUSAE GitHub Dataset*.
 """)
@@ -94,7 +95,7 @@ if df_raw is None:
 
 # --- Phase 1: Data Analysis ---
 if app_mode == "1. Data Analysis":
-    st.header("📊 Exploratory Data Analysis (EDA)")
+    st.header(" Exploratory Data Analysis (EDA)")
     
     col1, col2, col3 = st.columns(3)
     # Safely access length now
@@ -125,7 +126,7 @@ if app_mode == "1. Data Analysis":
 
 # --- Phase 2: Feature Engineering ---
 elif app_mode == "2. Feature Engineering":
-    st.header("🛠 Feature Engineering & Processing")
+    st.header(" Feature Engineering & Processing")
     
     st.markdown("""
     * **Feature Selection**: Using `repo_count`, `stars_received`, `total_commits`, and `is_org_member`.
@@ -148,7 +149,7 @@ elif app_mode == "2. Feature Engineering":
 
 # --- Phase 3: Model Training ---
 elif app_mode == "3. Model Training":
-    st.header("🧠 Model Selection & Tuning")
+    st.header(" Model Selection & Tuning")
     
     if 'processed' not in st.session_state:
         st.error("Please run Phase 2 (Feature Engineering) first.")
@@ -187,7 +188,7 @@ elif app_mode == "3. Model Training":
 
 # --- Phase 4: Performance & XAI ---
 elif app_mode == "4. Performance & XAI":
-    st.header("📈 Evaluation & Explainability")
+    st.header(" Evaluation & Explainability")
     
     if 'best_model' not in st.session_state:
         st.warning("Please train a model in Phase 3.")
@@ -207,7 +208,7 @@ elif app_mode == "4. Performance & XAI":
         st.plotly_chart(fig_cm, use_container_width=True)
         
         st.divider()
-        st.subheader("💡 Feature Importance (Global XAI)")
+        st.subheader(" Feature Importance (Global XAI)")
         if st.session_state['algo_name'] == "Random Forest":
             importances = model.feature_importances_
             feat_imp = pd.DataFrame({'Feature': X_test.columns, 'Importance': importances}).sort_values('Importance')
@@ -218,7 +219,7 @@ elif app_mode == "4. Performance & XAI":
 
 # --- Phase 5: Deployment Predictor ---
 elif app_mode == "5. Deployment Predictor":
-    st.header("🔮 Deployment Predictor")
+    st.header(" Deployment Predictor")
     
     if 'best_model' not in st.session_state:
         st.error("Model unavailable. Please train a model first.")
