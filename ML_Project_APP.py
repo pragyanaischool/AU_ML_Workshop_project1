@@ -25,7 +25,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- Title & Header ---
-st.imgae("PragyanAI_Transperent.png")
+st.image("PragyanAI_Transperent.png")
 st.title("GitHub Developer Classification System")
 st.markdown("""
 This platform implements a complete **Machine Learning Lifecycle** to classify GitHub users into **Machine Learning** or **Web Development** categories using the *MUSAE GitHub Dataset*.
