@@ -12,6 +12,7 @@ import requests
 import io
 
 # --- Page Configuration ---
+st.image("PragyanAI_Transperent.png")
 st.set_page_config(page_title="Real GitHub Dev Classifier", layout="wide")
 
 # --- Styling ---
